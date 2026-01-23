@@ -8,3 +8,4 @@
 | FEAT-00244 | 0.1.0 | 근거리 주차 보조 · 전시 048 | `body_00244_enable`, `showcase_00244_review` |
 | FEAT-00248 | 0.1.0 | 트레일러 연결 감지 및 트레일러 모드 전환 · 전시 052 | `body_00248_enable`, `showcase_00248_review` |
 | FEAT-00252 | 0.1.0 | 차량 사양 코딩 · 전시 056 | `body_00252_enable`, `showcase_00252_review` |
+| FEAT-00256 | 0.1.0 | 퍼들·접근 조명 · 전시 060 | `body_00256_enable`, `showcase_00256_review` |
