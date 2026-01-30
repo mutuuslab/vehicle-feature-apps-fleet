@@ -6,3 +6,4 @@
 | --- | --- | --- | --- |
 | FEAT-00199 | 0.1.0 | SOTIF 감시·트리거 조건 기록 · 전시 003 | `adas_00199_enable` |
 | FEAT-00200 | 0.1.0 | 자율주행 데이터 기록장치(DSSAD) · 전시 004 | `adas_00200_enable`, `showcase_00200_review` |
+| FEAT-00204 | 0.1.0 | 긴급 차량 인식(사이렌·경광등) · 전시 008 | `adas_00204_enable`, `showcase_00204_review` |
