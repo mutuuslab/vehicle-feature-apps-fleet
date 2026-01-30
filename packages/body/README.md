@@ -10,3 +10,4 @@
 | FEAT-00252 | 0.1.0 | 차량 사양 코딩 · 전시 056 | `body_00252_enable`, `showcase_00252_review` |
 | FEAT-00256 | 0.1.0 | 퍼들·접근 조명 · 전시 060 | `body_00256_enable`, `showcase_00256_review` |
 | FEAT-00260 | 0.1.0 | 테일게이트 열림 높이 기억 · 전시 064 | `body_00260_enable`, `showcase_00260_review` |
+| FEAT-00264 | 0.1.0 | 인포테인먼트 HMI 연동(공조) · 전시 068 | `body_00264_enable`, `showcase_00264_review` |
