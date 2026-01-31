@@ -5,3 +5,4 @@
 | Feature | Version | 이름 | Flag |
 | --- | --- | --- | --- |
 | FEAT-00199 | 0.1.0 | SOTIF 감시·트리거 조건 기록 · 전시 003 | `adas_00199_enable` |
+| FEAT-00203 | 0.1.0 | 공사 구간 인식 · 전시 007 | `adas_00203_enable` |
