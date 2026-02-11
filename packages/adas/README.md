@@ -12,3 +12,4 @@
 | FEAT-00208 | 0.1.0 | 탑승자 식별(얼굴·프로필) · 전시 012 | `adas_00208_enable`, `showcase_00208_review` |
 | FEAT-00211 | 0.1.0 | 교통 표지 인식 · 전시 015 | `adas_00211_enable` |
 | FEAT-00212 | 0.1.0 | 제한 속도 정보 기능 · 전시 016 | `adas_00212_enable`, `showcase_00212_review` |
+| FEAT-00216 | 0.1.0 | 연석 감지·휠 보호 · 전시 020 | `adas_00216_enable`, `showcase_00216_review` |
