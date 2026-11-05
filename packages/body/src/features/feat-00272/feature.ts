@@ -2,8 +2,8 @@
 // FEAT-00272 0.1.0 「부트로더(공조 제어기) · 전시 076」 — 가상 전시 데이터 — 정책·기준선 검토. 실제 고객 요청·검증 결과가 아닙니다.
 // 모든 분기는 flag-guards.ts의 함수로만 Flag를 읽는다. 오류·시간 초과는 꺼짐(기존 경로)으로 간다.
 import { flagOn, guardAllows, type FeatureDeps } from '../../../../runtime/src/flag-client.ts';
-import { BODY_00272_ENABLE, SHOWCASE_00272_REVIEW } from './flags.ts';
-import { body00272EnableEnabled, showcase00272ReviewEnabled } from './flag-guards.ts';
+import { BODY_00272_ENABLE, BODY_00272_BOOTLOADER } from './flags.ts';
+import { body00272EnableEnabled, body00272BootloaderEnabled } from './flag-guards.ts';
 
 export const FEATURE = { featureId: 'FEAT-00272', version: '0.1.0', name: '부트로더(공조 제어기) · 전시 076', safetyRelated: false } as const;
 
@@ -19,8 +19,8 @@ export async function runFeature(d: FeatureDeps): Promise<{ path: 'NEW' | 'LEGAC
   return { path: on ? 'NEW' : 'LEGACY', flagKey: BODY_00272_ENABLE };
 }
 
-/** Flag 제어점(showcase_00272_review) — 켜지면 새 기능 경로, 꺼지면 기존 경로 */
+/** Flag 제어점(body_00272_bootloader) — 켜지면 새 기능 경로, 꺼지면 기존 경로 */
 export async function runFeature2(d: FeatureDeps): Promise<{ path: 'NEW' | 'LEGACY'; flagKey: string }> {
-  const on = await enabled(d, SHOWCASE_00272_REVIEW, () => showcase00272ReviewEnabled(d.client, { targetingKey: d.vin }));
-  return { path: on ? 'NEW' : 'LEGACY', flagKey: SHOWCASE_00272_REVIEW };
+  const on = await enabled(d, BODY_00272_BOOTLOADER, () => body00272BootloaderEnabled(d.client, { targetingKey: d.vin }));
+  return { path: on ? 'NEW' : 'LEGACY', flagKey: BODY_00272_BOOTLOADER };
 }

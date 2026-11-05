@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { BODY_00272_ENABLE, SHOWCASE_00272_REVIEW } from './flags.ts';
+import { BODY_00272_ENABLE, BODY_00272_BOOTLOADER } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [BODY_00272_ENABLE, SHOWCASE_00272_REVIEW];
+const ALL = [BODY_00272_ENABLE, BODY_00272_BOOTLOADER];
 
 test('FEAT-00272 부트로더(공조 제어기) · 전시 076 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
