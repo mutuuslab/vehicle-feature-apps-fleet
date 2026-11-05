@@ -16,7 +16,7 @@
 | FEAT-00252 | 0.1.0 | 차량 사양 코딩 · 전시 056 | `body_00252_enable`, `body_00252_coding` |
 | FEAT-00256 | 0.1.0 | 퍼들·접근 조명 · 전시 060 | `body_00256_enable`, `body_00256_puddle` |
 | FEAT-00260 | 0.1.0 | 테일게이트 열림 높이 기억 · 전시 064 | `body_00260_enable`, `body_00260_tailgate` |
-| FEAT-00264 | 0.1.0 | 인포테인먼트 HMI 연동(공조) · 전시 068 | `body_00264_enable`, `showcase_00264_review` |
+| FEAT-00264 | 0.1.0 | 인포테인먼트 HMI 연동(공조) · 전시 068 | `body_00264_enable`, `body_00264_hvachmi` |
 | FEAT-00268 | 0.1.0 | 뒷유리 열선 · 전시 072 | `body_00268_enable`, `showcase_00268_review` |
 | FEAT-00272 | 0.1.0 | 부트로더(공조 제어기) · 전시 076 | `body_00272_enable`, `showcase_00272_review` |
 | FEAT-00276 | 0.1.0 | 공기질 연동 자동 내기 전환 · 전시 080 | `body_00276_enable`, `showcase_00276_review` |

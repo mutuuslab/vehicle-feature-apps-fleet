@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { BODY_00264_ENABLE, SHOWCASE_00264_REVIEW } from './flags.ts';
+import { BODY_00264_ENABLE, BODY_00264_HVACHMI } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [BODY_00264_ENABLE, SHOWCASE_00264_REVIEW];
+const ALL = [BODY_00264_ENABLE, BODY_00264_HVACHMI];
 
 test('FEAT-00264 인포테인먼트 HMI 연동(공조) · 전시 068 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
