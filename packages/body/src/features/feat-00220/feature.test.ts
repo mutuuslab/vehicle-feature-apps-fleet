@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { BODY_00220_ENABLE, SHOWCASE_00220_REVIEW } from './flags.ts';
+import { BODY_00220_ENABLE, BODY_00220_RKE } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [BODY_00220_ENABLE, SHOWCASE_00220_REVIEW];
+const ALL = [BODY_00220_ENABLE, BODY_00220_RKE];
 
 test('FEAT-00220 RF 원격 키(RKE) · 전시 024 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));

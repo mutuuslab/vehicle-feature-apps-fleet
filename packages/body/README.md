@@ -5,7 +5,7 @@
 | Feature | Version | 이름 | Flag |
 | --- | --- | --- | --- |
 | FEAT-00219 | 0.1.0 | 윈도 차일드 락 · 전시 023 | `body_00219_enable` |
-| FEAT-00220 | 0.1.0 | RF 원격 키(RKE) · 전시 024 | `body_00220_enable`, `showcase_00220_review` |
+| FEAT-00220 | 0.1.0 | RF 원격 키(RKE) · 전시 024 | `body_00220_enable`, `body_00220_rke` |
 | FEAT-00224 | 0.1.0 | 트렁크 잠금·트렁크 조명 · 전시 028 | `body_00224_enable`, `showcase_00224_review` |
 | FEAT-00228 | 0.1.0 | 주유구 도어 잠금 · 전시 032 | `body_00228_enable`, `showcase_00228_review` |
 | FEAT-00232 | 0.1.0 | 패닉 알람 · 전시 036 | `body_00232_enable`, `showcase_00232_review` |

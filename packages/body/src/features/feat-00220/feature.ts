@@ -2,8 +2,8 @@
 // FEAT-00220 0.1.0 「RF 원격 키(RKE) · 전시 024」 — 가상 전시 데이터 — 정책·기준선 검토. 실제 고객 요청·검증 결과가 아닙니다.
 // 모든 분기는 flag-guards.ts의 함수로만 Flag를 읽는다. 오류·시간 초과는 꺼짐(기존 경로)으로 간다.
 import { flagOn, guardAllows, type FeatureDeps } from '../../../../runtime/src/flag-client.ts';
-import { BODY_00220_ENABLE, SHOWCASE_00220_REVIEW } from './flags.ts';
-import { body00220EnableEnabled, showcase00220ReviewEnabled } from './flag-guards.ts';
+import { BODY_00220_ENABLE, BODY_00220_RKE } from './flags.ts';
+import { body00220EnableEnabled, body00220RkeEnabled } from './flag-guards.ts';
 
 export const FEATURE = { featureId: 'FEAT-00220', version: '0.1.0', name: 'RF 원격 키(RKE) · 전시 024', safetyRelated: false } as const;
 
@@ -19,8 +19,8 @@ export async function runFeature(d: FeatureDeps): Promise<{ path: 'NEW' | 'LEGAC
   return { path: on ? 'NEW' : 'LEGACY', flagKey: BODY_00220_ENABLE };
 }
 
-/** Flag 제어점(showcase_00220_review) — 켜지면 새 기능 경로, 꺼지면 기존 경로 */
+/** Flag 제어점(body_00220_rke) — 켜지면 새 기능 경로, 꺼지면 기존 경로 */
 export async function runFeature2(d: FeatureDeps): Promise<{ path: 'NEW' | 'LEGACY'; flagKey: string }> {
-  const on = await enabled(d, SHOWCASE_00220_REVIEW, () => showcase00220ReviewEnabled(d.client, { targetingKey: d.vin }));
-  return { path: on ? 'NEW' : 'LEGACY', flagKey: SHOWCASE_00220_REVIEW };
+  const on = await enabled(d, BODY_00220_RKE, () => body00220RkeEnabled(d.client, { targetingKey: d.vin }));
+  return { path: on ? 'NEW' : 'LEGACY', flagKey: BODY_00220_RKE };
 }
