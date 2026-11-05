@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { BODY_00256_ENABLE, SHOWCASE_00256_REVIEW } from './flags.ts';
+import { BODY_00256_ENABLE, BODY_00256_PUDDLE } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [BODY_00256_ENABLE, SHOWCASE_00256_REVIEW];
+const ALL = [BODY_00256_ENABLE, BODY_00256_PUDDLE];
 
 test('FEAT-00256 퍼들·접근 조명 · 전시 060 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
