@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { BODY_00284_ENABLE, SHOWCASE_00284_REVIEW } from './flags.ts';
+import { BODY_00284_ENABLE, BODY_00284_READLAMP } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [BODY_00284_ENABLE, SHOWCASE_00284_REVIEW];
+const ALL = [BODY_00284_ENABLE, BODY_00284_READLAMP];
 
 test('FEAT-00284 독서등·스폿라이트 제어 · 전시 088 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
