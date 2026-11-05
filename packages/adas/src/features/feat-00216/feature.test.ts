@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { ADAS_00216_ENABLE, SHOWCASE_00216_REVIEW } from './flags.ts';
+import { ADAS_00216_ENABLE, ADAS_00216_CURB } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [ADAS_00216_ENABLE, SHOWCASE_00216_REVIEW];
+const ALL = [ADAS_00216_ENABLE, ADAS_00216_CURB];
 
 test('FEAT-00216 연석 감지·휠 보호 · 전시 020 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
