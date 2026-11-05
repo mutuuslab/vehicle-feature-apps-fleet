@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { BODY_00288_ENABLE, SHOWCASE_00288_REVIEW } from './flags.ts';
+import { BODY_00288_ENABLE, BODY_00288_DIMMING } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [BODY_00288_ENABLE, SHOWCASE_00288_REVIEW];
+const ALL = [BODY_00288_ENABLE, BODY_00288_DIMMING];
 
 test('FEAT-00288 실내 조명 디밍 · 전시 092 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
