@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { ADAS_00200_ENABLE, SHOWCASE_00200_REVIEW } from './flags.ts';
+import { ADAS_00200_ENABLE, ADAS_00200_DSSAD } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [ADAS_00200_ENABLE, SHOWCASE_00200_REVIEW];
+const ALL = [ADAS_00200_ENABLE, ADAS_00200_DSSAD];
 
 test('FEAT-00200 자율주행 데이터 기록장치(DSSAD) · 전시 004 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
