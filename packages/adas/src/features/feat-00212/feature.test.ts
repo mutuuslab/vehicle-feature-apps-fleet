@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { ADAS_00212_ENABLE, SHOWCASE_00212_REVIEW } from './flags.ts';
+import { ADAS_00212_ENABLE, ADAS_00212_ISLA } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [ADAS_00212_ENABLE, SHOWCASE_00212_REVIEW];
+const ALL = [ADAS_00212_ENABLE, ADAS_00212_ISLA];
 
 test('FEAT-00212 제한 속도 정보 기능 · 전시 016 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
