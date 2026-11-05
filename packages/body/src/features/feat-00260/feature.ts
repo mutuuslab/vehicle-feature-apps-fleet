@@ -2,8 +2,8 @@
 // FEAT-00260 0.1.0 「테일게이트 열림 높이 기억 · 전시 064」 — 가상 전시 데이터 — 정책·기준선 검토. 실제 고객 요청·검증 결과가 아닙니다.
 // 모든 분기는 flag-guards.ts의 함수로만 Flag를 읽는다. 오류·시간 초과는 꺼짐(기존 경로)으로 간다.
 import { flagOn, guardAllows, type FeatureDeps } from '../../../../runtime/src/flag-client.ts';
-import { BODY_00260_ENABLE, SHOWCASE_00260_REVIEW } from './flags.ts';
-import { body00260EnableEnabled, showcase00260ReviewEnabled } from './flag-guards.ts';
+import { BODY_00260_ENABLE, BODY_00260_TAILGATE } from './flags.ts';
+import { body00260EnableEnabled, body00260TailgateEnabled } from './flag-guards.ts';
 
 export const FEATURE = { featureId: 'FEAT-00260', version: '0.1.0', name: '테일게이트 열림 높이 기억 · 전시 064', safetyRelated: false } as const;
 
@@ -19,8 +19,8 @@ export async function runFeature(d: FeatureDeps): Promise<{ path: 'NEW' | 'LEGAC
   return { path: on ? 'NEW' : 'LEGACY', flagKey: BODY_00260_ENABLE };
 }
 
-/** Flag 제어점(showcase_00260_review) — 켜지면 새 기능 경로, 꺼지면 기존 경로 */
+/** Flag 제어점(body_00260_tailgate) — 켜지면 새 기능 경로, 꺼지면 기존 경로 */
 export async function runFeature2(d: FeatureDeps): Promise<{ path: 'NEW' | 'LEGACY'; flagKey: string }> {
-  const on = await enabled(d, SHOWCASE_00260_REVIEW, () => showcase00260ReviewEnabled(d.client, { targetingKey: d.vin }));
-  return { path: on ? 'NEW' : 'LEGACY', flagKey: SHOWCASE_00260_REVIEW };
+  const on = await enabled(d, BODY_00260_TAILGATE, () => body00260TailgateEnabled(d.client, { targetingKey: d.vin }));
+  return { path: on ? 'NEW' : 'LEGACY', flagKey: BODY_00260_TAILGATE };
 }
