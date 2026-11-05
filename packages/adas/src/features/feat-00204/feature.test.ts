@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { ADAS_00204_ENABLE, SHOWCASE_00204_REVIEW } from './flags.ts';
+import { ADAS_00204_ENABLE, ADAS_00204_SIREN } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [ADAS_00204_ENABLE, SHOWCASE_00204_REVIEW];
+const ALL = [ADAS_00204_ENABLE, ADAS_00204_SIREN];
 
 test('FEAT-00204 긴급 차량 인식(사이렌·경광등) · 전시 008 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
