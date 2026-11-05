@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { BODY_00228_ENABLE, SHOWCASE_00228_REVIEW } from './flags.ts';
+import { BODY_00228_ENABLE, BODY_00228_FUELDOOR } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [BODY_00228_ENABLE, SHOWCASE_00228_REVIEW];
+const ALL = [BODY_00228_ENABLE, BODY_00228_FUELDOOR];
 
 test('FEAT-00228 주유구 도어 잠금 · 전시 032 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
