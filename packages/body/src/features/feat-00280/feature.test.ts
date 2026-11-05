@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { BODY_00280_ENABLE, SHOWCASE_00280_REVIEW } from './flags.ts';
+import { BODY_00280_ENABLE, BODY_00280_AIRQUALITY } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [BODY_00280_ENABLE, SHOWCASE_00280_REVIEW];
+const ALL = [BODY_00280_ENABLE, BODY_00280_AIRQUALITY];
 
 test('FEAT-00280 실내 CO2·미세먼지 모니터링 · 전시 084 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
