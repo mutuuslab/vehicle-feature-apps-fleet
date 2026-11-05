@@ -1,6 +1,6 @@
 // FF가 만든 호출 뼈대 — 기본값 OFF(false). 기능 코드는 이 함수로만 Flag를 읽는다.
 import type { FlagClient, FlagContext } from '../../../../runtime/src/flag-client.ts';
-import { BODY_00228_ENABLE, SHOWCASE_00228_REVIEW } from './flags.ts';
+import { BODY_00228_ENABLE, BODY_00228_FUELDOOR } from './flags.ts';
 
 /** Flag 제어점 — 기능 사용 허용 */
 export function body00228EnableEnabled(client: FlagClient, ctx: FlagContext): Promise<boolean> {
@@ -8,6 +8,6 @@ export function body00228EnableEnabled(client: FlagClient, ctx: FlagContext): Pr
 }
 
 /** Flag 제어점 — 기능 사용 허용 */
-export function showcase00228ReviewEnabled(client: FlagClient, ctx: FlagContext): Promise<boolean> {
-  return client.getBooleanValue(SHOWCASE_00228_REVIEW, false, ctx);
+export function body00228FueldoorEnabled(client: FlagClient, ctx: FlagContext): Promise<boolean> {
+  return client.getBooleanValue(BODY_00228_FUELDOOR, false, ctx);
 }

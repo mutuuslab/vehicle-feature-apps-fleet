@@ -7,7 +7,7 @@
 | FEAT-00219 | 0.1.0 | 윈도 차일드 락 · 전시 023 | `body_00219_enable` |
 | FEAT-00220 | 0.1.0 | RF 원격 키(RKE) · 전시 024 | `body_00220_enable`, `body_00220_rke` |
 | FEAT-00224 | 0.1.0 | 트렁크 잠금·트렁크 조명 · 전시 028 | `body_00224_enable`, `body_00224_trunk` |
-| FEAT-00228 | 0.1.0 | 주유구 도어 잠금 · 전시 032 | `body_00228_enable`, `showcase_00228_review` |
+| FEAT-00228 | 0.1.0 | 주유구 도어 잠금 · 전시 032 | `body_00228_enable`, `body_00228_fueldoor` |
 | FEAT-00232 | 0.1.0 | 패닉 알람 · 전시 036 | `body_00232_enable`, `showcase_00232_review` |
 | FEAT-00236 | 0.1.0 | 센터 콘솔 HMI · 전시 040 | `body_00236_enable`, `showcase_00236_review` |
 | FEAT-00240 | 0.1.0 | 주행 모드 선택 · 전시 044 | `body_00240_enable`, `showcase_00240_review` |
