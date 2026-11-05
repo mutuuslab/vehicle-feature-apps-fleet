@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { ADAS_00208_ENABLE, SHOWCASE_00208_REVIEW } from './flags.ts';
+import { ADAS_00208_ENABLE, ADAS_00208_FACEID } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [ADAS_00208_ENABLE, SHOWCASE_00208_REVIEW];
+const ALL = [ADAS_00208_ENABLE, ADAS_00208_FACEID];
 
 test('FEAT-00208 탑승자 식별(얼굴·프로필) · 전시 012 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
