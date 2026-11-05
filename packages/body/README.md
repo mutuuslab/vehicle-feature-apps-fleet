@@ -19,7 +19,7 @@
 | FEAT-00264 | 0.1.0 | 인포테인먼트 HMI 연동(공조) · 전시 068 | `body_00264_enable`, `body_00264_hvachmi` |
 | FEAT-00268 | 0.1.0 | 뒷유리 열선 · 전시 072 | `body_00268_enable`, `body_00268_defog` |
 | FEAT-00272 | 0.1.0 | 부트로더(공조 제어기) · 전시 076 | `body_00272_enable`, `body_00272_bootloader` |
-| FEAT-00276 | 0.1.0 | 공기질 연동 자동 내기 전환 · 전시 080 | `body_00276_enable`, `showcase_00276_review` |
+| FEAT-00276 | 0.1.0 | 공기질 연동 자동 내기 전환 · 전시 080 | `body_00276_enable`, `body_00276_recirc` |
 | FEAT-00280 | 0.1.0 | 실내 CO2·미세먼지 모니터링 · 전시 084 | `body_00280_enable`, `showcase_00280_review` |
 | FEAT-00284 | 0.1.0 | 독서등·스폿라이트 제어 · 전시 088 | `body_00284_enable`, `showcase_00284_review` |
 | FEAT-00288 | 0.1.0 | 실내 조명 디밍 · 전시 092 | `body_00288_enable`, `showcase_00288_review` |

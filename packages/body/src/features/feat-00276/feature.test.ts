@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { BODY_00276_ENABLE, SHOWCASE_00276_REVIEW } from './flags.ts';
+import { BODY_00276_ENABLE, BODY_00276_RECIRC } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [BODY_00276_ENABLE, SHOWCASE_00276_REVIEW];
+const ALL = [BODY_00276_ENABLE, BODY_00276_RECIRC];
 
 test('FEAT-00276 공기질 연동 자동 내기 전환 · 전시 080 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
