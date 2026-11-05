@@ -3,10 +3,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { denyAll, failingClient, fakeClient, hangingClient, testDeps } from '../../../../runtime/src/testing.ts';
-import { BODY_00236_ENABLE, SHOWCASE_00236_REVIEW } from './flags.ts';
+import { BODY_00236_ENABLE, BODY_00236_CONSOLE } from './flags.ts';
 import { FEATURE, runFeature, runFeature2 } from './feature.ts';
 
-const ALL = [BODY_00236_ENABLE, SHOWCASE_00236_REVIEW];
+const ALL = [BODY_00236_ENABLE, BODY_00236_CONSOLE];
 
 test('FEAT-00236 센터 콘솔 HMI · 전시 040 — 기본값 OFF(Flag 없음)는 기존 경로', async () => {
   const d = testDeps(fakeClient([]));
